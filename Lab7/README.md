@@ -1,12 +1,9 @@
-Лабораторная работа 7
-
+Лабораторная работа 7/
 ├── report/
 │   ├── report.md          # Отчёт в формате Markdown
-│   ├── report.docx        # Отчёт в формате DOCX
 │   ├── report.pdf         # Отчёт в формате PDF
 │       ├── screenshot1.png
-│       ├── screenshot2.png
-│       └── ...
+│       └── screenshot2.png
 ├── presentation/
 │   ├── presentation.md    # Презентация в формате Markdown
 │   ├── presentation.pdf   # Презентация в формате PDF
@@ -14,6 +11,7 @@
 │   └── assets/            # Каталог для материалов презентации
 │       ├── slide1.png
 │       ├── slide2.png
+│       └── ...
 └── README.md              # Информация о проекте
 
 # Отчёт по решению дискретного логарифма методом Полларда
