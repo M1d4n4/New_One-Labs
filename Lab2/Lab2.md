@@ -1,5 +1,7 @@
 # Метод 1: Маршрутное перестановление
+
 function route_transposition(text::String, rows::Int, cols::Int, key::String)
+
     # Дополняем текст пробелами до нужной длины
     required_length = rows * cols
     if length(text) < required_length
