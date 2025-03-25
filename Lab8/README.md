@@ -70,6 +70,7 @@ end
 # Умножение (столбиком)
 
 function multiply_numbers(u::Vector{Int}, v::Vector{Int}, b::Int)
+
     m = length(v)
     n = length(u)
     w = zeros(Int, m + n)
