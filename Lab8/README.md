@@ -15,9 +15,12 @@
 │   ├── presentation.pdf       # Презентация в PDF
 
 └── presentation.html          # Презентация в HTML
+
  
 # Сложение
+
 function add_numbers(u::Vector{Int}, v::Vector{Int}, b::Int)
+
     n = max(length(u), length(v))
     u_padded = [u; zeros(Int, n - length(u))]
     v_padded = [v; zeros(Int, n - length(v))]
