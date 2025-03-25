@@ -1,11 +1,19 @@
 Лабораторная работа 8/
+
 ├── README.md                  # Основной отчёт в Markdown
+
 │   ├── screenshot1.png
+
 │   └── screenshot2.png
+
 ├── presentation.md            # Презентация в Markdown
+
 ├── release/                   # Каталог для файлов релиза
+
 │   ├── report.pdf             # Отчёт в PDF
+
 │   ├── presentation.pdf       # Презентация в PDF
+
 └── presentation.html          # Презентация в HTML
  
 # Сложение
