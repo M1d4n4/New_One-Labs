@@ -10,10 +10,16 @@
   ```julia
   caesar_cipher("Привет, мир!", 5) -> "Ухншйч, рнх!"
 
+![image](https://github.com/user-attachments/assets/4b0af7e5-7740-48c5-a7ee-5720a933e8ad)
+
+
 ##  Шифр Атбаш 
 Описание метода.
 
 atbash_cipher("Пример шифра Атбаш") -> "Пирерм шурпя Ягэша"
+
+![image](https://github.com/user-attachments/assets/4c9c1e96-af5f-482c-9dc7-864f74ac801f)
+
 
 Заключение
 Проект завершён.
