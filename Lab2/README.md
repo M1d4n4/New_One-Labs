@@ -1,12 +1,19 @@
 # Лабораторная работа 2
-│
+
 ├── main.jl                # Исходный код программы
+
 ├── report.md              # Отчёт в Markdown
+
 ├── report.docx            # Отчёт в DOCX
+
 ├── report.pdf             # Отчёт в PDF
+
 ├── presentation.md        # Презентация в Markdown
+
 ├── presentation.html      # Презентация в HTML
+
 ├── presentation.pdf       # Презентация в PDF
+
 └── screenshots/           # Скриншоты (если есть)
 
 # Метод 1: Маршрутное перестановление
@@ -14,6 +21,7 @@
 function route_transposition(text::String, rows::Int, cols::Int, key::String)
 
     # Дополняем текст пробелами до нужной длины
+    
     required_length = rows * cols
     if length(text) < required_length
         text = text * repeat(" ", required_length - length(text))
@@ -22,9 +30,11 @@ function route_transposition(text::String, rows::Int, cols::Int, key::String)
     end
     
     # Заполняем таблицу символами текста
+    
     table = reshape(collect(text), (rows, cols))
     
     # Сортируем столбцы по ключу
+    
     sorted_indices = sortperm(collect(key))
     encrypted_table = table[:, sorted_indices]
     
@@ -85,12 +95,17 @@ function vigenere_encrypt(text::String, key::String)
     
     for (t_char, k_char) in zip(text_chars, repeated_key)
         if t_char in alphabet_chars
+        
             # Находим индексы символов в алфавите
+            
             t_idx = findfirst(==(t_char), alphabet_chars)
+            
             k_idx = findfirst(==(k_char), alphabet_chars)
             
             # Вычисляем новый символ
+            
             new_idx = mod(t_idx + k_idx - 2, length(alphabet_chars)) + 1
+            
             push!(encrypted_text, alphabet_chars[new_idx])
         else
             push!(encrypted_text, t_char)
