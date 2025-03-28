@@ -127,5 +127,7 @@ println("\nБинарный алгоритм Евклида:")
 println(binary_gcd(12345, 24690))  # Вывод: 12345
 
 println("\nРасширенный бинарный алгоритм Евклида:")
+
 gcd_val, x, y = extended_binary_gcd(12345, 24690)
+
 println("НОД: $gcd_val, x: $x, y: $y")
