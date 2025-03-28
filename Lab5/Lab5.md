@@ -1,5 +1,6 @@
 # Тест Ферма
 function fermat_test(n::Int, k::Int = 5)::String
+
     if n <= 1
         return "Число должно быть больше 1"
     end
@@ -24,6 +25,7 @@ end
 
 # Символ Якоби
 function jacobi_symbol(a::Int, n::Int)::Int
+
     if n <= 0 || iseven(n)
         error("Модуль должен быть нечетным положительным числом")
     end
@@ -47,6 +49,7 @@ end
 
 # Тест Соловея-Штрассена
 function solovay_strassen_test(n::Int, k::Int = 5)::String
+
     if n <= 1
         return "Число должно быть больше 1"
     end
@@ -72,6 +75,7 @@ end
 
 # Тест Миллера-Рабина
 function miller_rabin_test(n::Int, k::Int = 5)::String
+
     if n <= 1
         return "Число должно быть больше 1"
     end
@@ -111,13 +115,19 @@ end
 
 # Пример использования
 println("Тест Ферма:")
+
 println(fermat_test(17))          # Пример: 17 — простое
+
 println(fermat_test(341))         # Пример: 341 — составное
 
 println("\nТест Соловея-Штрассена:")
+
 println(solovay_strassen_test(17)) # Пример: 17 — простое
+
 println(solovay_strassen_test(341)) # Пример: 341 — составное
 
 println("\nТест Миллера-Рабина:")
+
 println(miller_rabin_test(17))     # Пример: 17 — простое
+
 println(miller_rabin_test(341))    # Пример: 341 — составное
