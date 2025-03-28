@@ -1,5 +1,6 @@
 # Функция для решения дискретного логарифма методом Полларда
 function pollard_rho_log(p::Int, a::Int, b::Int)
+
     # Определяем порядок элемента a по модулю p
     function order(a::Int, p::Int)::Int
         r = 1
@@ -43,13 +44,20 @@ function pollard_rho_log(p::Int, a::Int, b::Int)
 end
 
 # Тестирование
+
 p = 107
+
 a = 10
+
 b = 64
 
 x = pollard_rho_log(p, a, b)
+
 if x !== nothing
+
     println("Решение: x = $x")
+    
 else
+
     println("Решение не найдено.")
 end
