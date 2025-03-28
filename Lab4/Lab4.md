@@ -1,5 +1,6 @@
 # Классический алгоритм Евклида
 function gcd_euclidean(a::Int, b::Int)::Int
+
     while b != 0
         a, b = b, a % b
     end
@@ -8,6 +9,7 @@ end
 
 # Расширенный алгоритм Евклида
 function extended_gcd(a::Int, b::Int)::Tuple{Int, Int, Int}
+
     x, last_x = 0, 1
     y, last_y = 1, 0
     while b != 0
@@ -21,6 +23,7 @@ end
 
 # Бинарный алгоритм Евклида
 function binary_gcd(a::Int, b::Int)::Int
+
     if a == 0
         return abs(b)
     elseif b == 0
@@ -53,6 +56,7 @@ end
 
 # Расширенный бинарный алгоритм Евклида
 function extended_binary_gcd(a::Int, b::Int)::Tuple{Int, Int, Int}
+
     if a == 0
         return (abs(b), 0, 1)
     elseif b == 0
@@ -107,14 +111,19 @@ function extended_binary_gcd(a::Int, b::Int)::Tuple{Int, Int, Int}
 end
 
 # Примеры использования всех функций
+
 println("Классический алгоритм Евклида:")
+
 println(gcd_euclidean(12345, 24690))  # Вывод: 12345
 
 println("\nРасширенный алгоритм Евклида:")
+
 gcd_val, x, y = extended_gcd(12345, 24690)
+
 println("НОД: $gcd_val, x: $x, y: $y")  # Вывод: НОД: 12345, x: 1, y: -1
 
 println("\nБинарный алгоритм Евклида:")
+
 println(binary_gcd(12345, 24690))  # Вывод: 12345
 
 println("\nРасширенный бинарный алгоритм Евклида:")
