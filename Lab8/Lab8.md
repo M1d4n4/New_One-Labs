@@ -1,5 +1,6 @@
 # Сложение
 function add_numbers(u::Vector{Int}, v::Vector{Int}, b::Int)
+
     n = max(length(u), length(v))
     u_padded = [u; zeros(Int, n - length(u))]
     v_padded = [v; zeros(Int, n - length(v))]
@@ -22,6 +23,7 @@ end
 
 # Вычитание (u >= v)
 function subtract_numbers(u::Vector{Int}, v::Vector{Int}, b::Int)
+
     n = max(length(u), length(v))
     u_padded = [u; zeros(Int, n - length(u))]
     v_padded = [v; zeros(Int, n - length(v))]
@@ -46,6 +48,7 @@ end
 
 # Умножение (столбиком)
 function multiply_numbers(u::Vector{Int}, v::Vector{Int}, b::Int)
+
     m = length(v)
     n = length(u)
     w = zeros(Int, m + n)
@@ -71,6 +74,7 @@ end
 
 # Быстрое умножение
 function fast_multiply(u::Vector{Int}, v::Vector{Int}, b::Int)
+
     m = length(v)
     n = length(u)
     w = zeros(Int, m + n)
@@ -100,20 +104,26 @@ end
 
 # Вспомогательные функции для тестирования
 number_to_digits(n, b) = n == 0 ? [0] : reverse(digits(n, base=b))
+
 digits_to_number(digits, b) = sum(d * b^(i-1) for (i, d) in enumerate(reverse(digits)))
 
 # Пример использования
 u = number_to_digits(243, 10)  # [3,4,2] (обратный порядок)
+
 v = number_to_digits(99, 10)   # [9,9]
 
 w_add = add_numbers(u, v, 10)
+
 println("Сложение: ", digits_to_number(w_add, 10))  # 342
 
 w_sub = subtract_numbers(u, v, 10)
+
 println("Вычитание: ", digits_to_number(w_sub, 10))  # 144
 
 w_mul = multiply_numbers(u, v, 10)
+
 println("Умножение (столбиком): ", digits_to_number(w_mul, 10))  # 24057
 
 w_fast_mul = fast_multiply(u, v, 10)
+
 println("Быстрое умножение: ", digits_to_number(w_fast_mul, 10))  # 24057
